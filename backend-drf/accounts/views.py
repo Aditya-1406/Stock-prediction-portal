@@ -7,8 +7,7 @@ from rest_framework.permissions import AllowAny
 
 
 
-class RegisterView(generics.CreateAPIView):
+class RegisterView(generics.ListCreateAPIView):
     queryset = User.objects.all()
     serializer_class =  UserSerializer
     permission_classes = [AllowAny]
-    
